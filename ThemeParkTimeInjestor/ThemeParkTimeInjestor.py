@@ -32,7 +32,7 @@ from datetime import datetime
 import pytz
 import pickle
 
-class ThemeParkTimeInjestor(object):
+class ThemeParkTimeInjestor:
 
     def __init__(self, filePath):
         self.ThemeParkAPI = ThemeParkAPI()

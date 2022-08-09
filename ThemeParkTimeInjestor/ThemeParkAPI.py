@@ -4,7 +4,7 @@ from ParkTimeDataPoint import *
 from dateutil.parser import parse
 from datetime import datetime
 
-class ThemeParkAPI(object):
+class ThemeParkAPI:
 
 	def __init__(self):
 		self.APIBase = "https://api.themeparks.wiki/v1/entity/"

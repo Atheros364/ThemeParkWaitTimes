@@ -3,7 +3,7 @@ import requests
 from dateutil.parser import parse
 from datetime import datetime
 
-class WeatherAPI(object):
+class WeatherAPI:
 
     def __init__(self):
         self.APIBase = "https://api.openweathermap.org/data/2.5/weather?lat="
