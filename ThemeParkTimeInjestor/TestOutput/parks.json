@@ -1,0 +1,56 @@
+[
+	{
+		"name": "DisneyWorldMagicKingdom",
+		"id": "75ea578a-adc8-4116-a54d-dccb60765ef9",
+		"lat": 28.4160036778,
+		"long": -81.5811902834
+	},
+	{
+		"name": "DisneyWorldEpcot",
+		"id": "47f90d2c-e191-4239-a466-5892ef59a88b",
+		"lat": 28.3762301397,
+		"long": -81.5494047655
+	},
+	{
+		"name": "DisneyWorldHollywoodStudios",
+		"id": "288747d1-8b4f-4a64-867e-ea7c9b27bad8",
+		"lat": 28.3584111691,
+		"long": -81.558689232
+	},
+	{
+		"name": "DisneyWorldAnimalKingdom",
+		"id": "1c84a229-8862-4648-9c71-378ddd2c7693",
+		"lat": 28.3553842507,
+		"long": -81.5900898529
+	},
+	{
+		"name": "UniversalStudiosFlorida",
+		"id": "eb3f4560-2383-4a36-9152-6b3e5ed6bc57",
+		"lat": 28,
+		"long": -81
+	},
+	{
+		"name": "UniversalIslandsofAdventure",
+		"id": "267615cc-8943-4c2a-ae2c-5da728ca591f",
+		"lat": 28,
+		"long": -81
+	},
+	{
+		"name": "UniversalStudiosCalifornia",
+		"id": "bc4005c5-8c7e-41d7-b349-cdddf1796427",
+		"lat": 34.137966,
+		"long": -118.353488
+	},
+	{
+		"name": "Disneyland",
+		"id": "7340550b-c14d-4def-80bb-acdb51d49a66",
+		"lat": 33.8095545068,
+		"long": -117.9189529669
+	},
+	{
+		"name": "DisneylandCaliforniaAdventure",
+		"id": "832fcd51-ea19-4e77-85c7-75d5843b127c",
+		"lat": 33.8087804896,
+		"long": -117.9189353206
+	}
+]
