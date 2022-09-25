@@ -1,0 +1,24 @@
+Data we have-
+Every 30 min
+
+Date/Time
+day of week
+season
+weather code
+temperature
+Per ride:
+	Status (open/closed/down)
+	wait time
+
+Input:
+Date/Time
+day of week
+season
+weather code
+temp
+ride status
+? history of ride times for day
+
+Want-
+prediction of wait times for every ride for some time (rest of day)?
+

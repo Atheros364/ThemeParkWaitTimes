@@ -31,6 +31,7 @@ from dateutil.parser import parse
 from datetime import datetime
 import pytz
 import pickle
+from PostgresDataModel import PsDataModel
 
 class ThemeParkTimeInjestor:
 
@@ -39,6 +40,7 @@ class ThemeParkTimeInjestor:
         self.WeatherAPI = WeatherAPI()
         self.tz = pytz.timezone("US/Arizona")
         self.filePath = filePath
+        self.dataModel = PsDataModel()
         self.parks = self.LoadParks()
         self.SetDayInfo()
 
@@ -63,8 +65,9 @@ class ThemeParkTimeInjestor:
         self.masterDataPoint = ParkTimeDataPoint()
         self.masterDataPoint.date = str(datetime.now(tz=self.tz))
         self.masterDateCode = self.GetDateCode(datetime.now(tz=self.tz))
-        self.masterDataPoint.dayOfWeek =datetime.now(tz=self.tz).weekday()
+        self.masterDataPoint.dayOfWeek = datetime.now(tz=self.tz).weekday()
         self.masterDataPoint.season = self.GetSeason()
+        self.dayInfoId = self.dataModel.AddDayInfo(self.masterDataPoint)
         for park in self.parks:
             self.ThemeParkAPI.GetOpeningHours(park)
 
@@ -99,7 +102,8 @@ class ThemeParkTimeInjestor:
                 parkDataPoint.rideDataPoints = rideDataPoints 
                 dataPoints.append(parkDataPoint)
 
-        self.SaveData(dataPoints)
+        #self.SaveData(dataPoints)
+        self.SaveDataToDB(dataPoints)
         if len(dataPoints) > 0:
             print(datetime.now().strftime("%Y-%m-%d %H:%M") + ": Saved " + str(len(dataPoints)))
         else:
@@ -114,6 +118,10 @@ class ThemeParkTimeInjestor:
             with open(filePath, 'a') as f:
                 jsonString = json.dumps(point, default=self.serialize) + "\n"
                 f.write(jsonString)
+
+    def SaveDataToDB(self, dataPoints):
+        for point in dataPoints:
+            self.dataModel.AddDataPoint(point,self.dayInfoId)
 
     def GetDateCode(self, date):
         return 10000*date.year + 100*date.month + date.day
