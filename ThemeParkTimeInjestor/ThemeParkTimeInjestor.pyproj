@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>dda4dab4-a4f9-4f0c-af62-1d4d4d0c626e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>TransferFileRecords.py</StartupFile>
+    <StartupFile>RunInjestor.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
